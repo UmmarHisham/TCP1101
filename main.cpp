@@ -8,6 +8,16 @@
 // Phones: 019-4350096                   | 019-3329702
 // *********************************************************
 
+// *********************************************************
+// Course: TCP1101 PROGRAMMING FUNDAMENTALS
+// Year: Trimester 1, 2022/23 (T2215)
+// Lab: TT1L
+// Names:  AHMAD_LUQMAN_BIN_ZAKARANI     | MUHAMMAD_UMMAR_HISHAM_BIN_AHMAD_MADZLAN
+// IDs:    1211101384                    | 1211100415
+// Emails: 1211101384@student.mmu.edu.my | 1211100415@student.mmu.edu.my
+// Phones: 019-4350096                   | 019-3329702
+// *********************************************************
+
 #include <iostream>
 #include <string>
 #include <cstdlib>
@@ -43,6 +53,7 @@ private:
     int alienX_, alienY_, alienHealth, alienMaxHealth, alienAttack;
     int zombieCount_, zombieNo, zombieHealth, zombieAttack;
     int zombieDied;
+    bool saveGame = false;
 
     char alienCh_ = 'A';
 
@@ -1709,6 +1720,7 @@ void Board::commandMenu()
     else if (command == "save")
     {
         gameSave();
+        commandMenu();
     }
     else if (command == "load")
     {
@@ -1718,6 +1730,32 @@ void Board::commandMenu()
     }
     else if (command == "quit")
     {
+        if (!saveGame)
+        {
+            string confirmSave;
+            cout << "\n Are you sure you want to quit without saving the game? (y/N)\n confirming =>";
+            cin >> confirmSave;
+
+            if (confirmSave == "y" || confirmSave == "Y")
+            {
+                cout << " Noted :)\n";
+                cout << " Returning to the Main Menu,\n\n ";
+                pause();
+                mainMenu();
+            }
+            else if (confirmSave == "n" || confirmSave == "N")
+            {
+                pause();
+                gameSave();
+                mainMenu();
+            }
+            else
+            {
+                cout << " Invalid input, return to the Game\n\n ";
+                pause();
+                commandMenu();
+            }
+        }
         string confirmQuit;
         cout << "\n Are you sure to quit the game? (y/N)\n confirming => ";
         cin >> confirmQuit;
@@ -1790,7 +1828,9 @@ void Board::gameSave()
 
     saveFile.close();
 
-    commandMenu();
+    cout << "  The game has been saved in file " << filename << endl;
+
+    saveGame = true;
 }
 
 void Board::gameLoad()
@@ -1844,6 +1884,16 @@ void Board::gameLoad()
         loadFile >> zombieList_[i][0] >> zombieList_[i][1] >> zombieList_[i][2] >> zombieList_[i][3] >> zombieList_[i][4] >> zombieList_[i][5] >> zombieList_[i][6];
     }
 
+    occupiedMap_.clear();
+    occupiedMap_.insert({alienX_ - 1, alienY_ -1});
+    for (int i = 0; i < zombieCount_; i++)
+    {
+        if (zombieList_[i][3] > 0)
+        {
+            occupiedMap_.insert({zombieList_[i][1] - 1, zombieList_[1][2] - 1});
+        }
+    }
+
     loadFile.close();
 
     clear();
@@ -1869,6 +1919,7 @@ void Board::gameLoad()
         cout << "\n Resuming the game\n\n ";
         pause();
         commandMenu();
+        saveGame = false;
     }
     else if (confirm == "n" || confirm == "N")
     {
@@ -2044,3 +2095,4 @@ int main()
 
     return 0;
 }
+
