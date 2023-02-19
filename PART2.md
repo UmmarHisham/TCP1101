@@ -10,24 +10,24 @@
 
 List all the features completed.
 
-1. Default and custom board size
-2. Put the Alien in the middle of the board
-3. Spawn zombie randomly according to the numbers of zombie
-4. Alien can move in all 4 direction until it hit Borders or Obstacle
-5. Zombie can move randomly after Alien's turn.
-6. Implementation of in-game objects.
-7. Randomly generate the attributes for the Alien and Zombies.
-8. Alien and Zombie attributes display.
-8. Alien can damage the Zombie when they collided.
-9. Zombie can attack the Alien when in range.
+1.  Default and custom board size
+2.  Put the Alien in the middle of the board
+3.  Spawn zombie randomly according to the numbers of zombie
+4.  Alien can move in all 4 direction until it hit Borders or Obstacle
+5.  Zombie can move randomly after Alien's turn.
+6.  Implementation of in-game objects.
+7.  Randomly generate the attributes for the Alien and Zombies.
+8.  Alien and Zombie attributes display.
+8.  Alien can damage the Zombie when they collided.
+9.  Zombie can attack the Alien when in range.
+10. Save and load.
 
 
 ### To Do
 
 List all the features not yet done. Remove this section if there is no incomplete requirements.
 
-1. Save and load.
-2. Damage pod implementation.
+1. N/A
 
 ## Additional Features
 
@@ -67,6 +67,8 @@ Solution: range = diffX + diffY.
 3. The nearest zombie from pod.<br />
 Solution: run loop checking for nearest zombie, if nearer it will clear a vector, and put the new nearest zombie, if there are 2 or more that same, it will randomly choosed.
 
-3. Winning the game.<br />
+4. Winning the game.<br />
 Solution: every time the zombie is killed, zombie kill counter go up by 1, if the zombie killed is equal to zombie count, the alien win.
+
+
 
