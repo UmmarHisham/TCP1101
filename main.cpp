@@ -514,22 +514,25 @@ void Board::pod(int podX, int podY)
 
     for (int i = 0; i < zombieCount_; i++)
     {
-        int diffX = abs((zombieList_[i][1] - 1) - podX);
-        int diffY = abs((zombieList_[i][2] - 1) - podY);
-
-        int zombieDistance = diffX + diffY;
-
-        if (zombieDistance < nearestZombie)
+        if (zombieList_[i][3] > 0)
         {
-            nearestZombie = zombieDistance;
-            nearPod.clear();
-            nearPod.resize(1);
-            nearPod[0] = zombieList_[i][0];
-        }
-        else if (zombieDistance == nearestZombie)
-        {
-            nearPod.resize(nearPod.size() + 1);
-            nearPod[nearPod.size() - 1] = zombieList_[i][0];
+            int diffX = abs((zombieList_[i][1] - 1) - podX);
+            int diffY = abs((zombieList_[i][2] - 1) - podY);
+
+            int zombieDistance = diffX + diffY;
+
+            if (zombieDistance < nearestZombie)
+            {
+                nearestZombie = zombieDistance;
+                nearPod.clear();
+                nearPod.resize(1);
+                nearPod[0] = zombieList_[i][0];
+            }
+            else if (zombieDistance == nearestZombie)
+            {
+                nearPod.resize(nearPod.size() + 1);
+                nearPod[nearPod.size() - 1] = zombieList_[i][0];
+            }
         }
     }
 
