@@ -280,8 +280,8 @@ void Board::displayDefaultSetting(int boardX, int boardY, int zombieCount)
     cout << "  D E F A U L T    G A M E    S E T T I N G S " << endl;
     cout << " =============================================" << endl;
 
-    cout << " Number of Rows    : " << boardX << endl;
-    cout << " Number of Columns : " << boardY << endl;
+    cout << " Number of Columns : " << boardX << endl;
+    cout << " Number of Rows    : " << boardY << endl;
     cout << " Number of Zombies : " << zombieCount << endl
          << endl;
 
@@ -313,8 +313,8 @@ void Board::displayCurrentSetting(int boardX, int boardY, int zombieCount)
     cout << "  C U R R E N T    G A M E    S E T T I N G S " << endl;
     cout << " =============================================" << endl;
 
-    cout << " Number of Rows    : " << boardX << endl;
-    cout << " Number of Columns : " << boardY << endl;
+    cout << " Number of Columns : " << boardX << endl;
+    cout << " Number of Rows    : " << boardY << endl;
     cout << " Number of Zombies : " << zombieCount << endl
          << endl;
 
@@ -349,7 +349,7 @@ void Board::changeSetting(int boardX, int boardY, int zombieCount)
 
     do
     {
-        cout << " Enter rows    => ";
+        cout << " Enter columns    => ";
         cin >> boardX;
 
         if (boardX % 2 == 0)
@@ -361,7 +361,7 @@ void Board::changeSetting(int boardX, int boardY, int zombieCount)
     cout << endl;
     do
     {
-        cout << " Enter columns => ";
+        cout << " Enter rows => ";
         cin >> boardY;
         ;
 
@@ -1999,7 +1999,7 @@ void mainMenu()
     {
         cout << " Credits to:\n ";
         cout << " 1. Ahmad Luqman Bin Zakarani - 1211101384\n ";
-        cout << " 2. Muhammad Ummar Hisham Bin Ahmad Madzlan\n ";
+        cout << " 2. Muhammad Ummar Hisham Bin Ahmad Madzlan - 1211100415\n ";
         pause();
         mainMenu();
     }
