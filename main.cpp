@@ -267,8 +267,8 @@ void Board::displayAttributeAlien()
 void Board::restoreMap()
 {
 
-    char objects[] = {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
-    int noOfObjects = 10;
+    char objects[] = {'<', '^', '>', 'v', 'h', 'p', 'r', ' ', ' '};
+    int noOfObjects = 9;
 
     for (int i = 0; i < boardY_; i++)
     {
