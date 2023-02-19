@@ -355,7 +355,7 @@ void Board::changeSetting(int boardX, int boardY, int zombieCount)
 
         if (boardX % 2 == 0)
         {
-            cout << " Please enter an Odd number only\n";
+            cout << "\n Please enter an Odd number only\n";
         }
     } while (boardX % 2 == 0);
 
