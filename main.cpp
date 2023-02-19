@@ -647,7 +647,6 @@ void Board::alienMoveUp() // the comment only in here, ither just copy paste wit
                 }
 
                 pause();
-                break;
             }
             else if (map_[alienY_ - 1][alienX_ - 1] == 'h') // if the next spot is 'h'
             {
@@ -812,7 +811,6 @@ void Board::alienMoveDown()
                 }
 
                 pause();
-                break;
             }
             else if (map_[alienY_ - 1][alienX_ - 1] == 'h')
             {
@@ -980,7 +978,6 @@ void Board::alienMoveRight()
                 }
 
                 pause();
-                break;
             }
             else if (map_[alienY_ - 1][alienX_ - 1] == 'h')
             {
@@ -1148,7 +1145,6 @@ void Board::alienMoveLeft()
                 }
 
                 pause();
-                break;
             }
             else if (map_[alienY_ - 1][alienX_ - 1] == 'h')
             {
@@ -1878,7 +1874,7 @@ void Board::gameLoad()
     }
 
     occupiedMap_.clear();
-    occupiedMap_.insert({alienX_ - 1, alienY_ -1});
+    occupiedMap_.insert({alienX_ - 1, alienY_ - 1});
     for (int i = 0; i < zombieCount_; i++)
     {
         if (zombieList_[i][3] > 0)
@@ -2088,4 +2084,3 @@ int main()
 
     return 0;
 }
-
