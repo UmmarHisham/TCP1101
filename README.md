@@ -8,7 +8,7 @@ Welcome to Alien VS Zombies
 ![Example Image](https://drive.google.com/uc?id=1efviVtXSZv--VM4CmWyQeCMIq-OuZyTZ)<br />
 Preview of the game.
 
-[Video Demo](https://youtu.be/QB1vPBx6YJU).
+[Video Demo](https://youtu.be/-nRKrDpScXk).
 
 ## Compilation Instructions
 
