@@ -8,16 +8,6 @@
 // Phones: 019-4350096                   | 019-3329702
 // *********************************************************
 
-// *********************************************************
-// Course: TCP1101 PROGRAMMING FUNDAMENTALS
-// Year: Trimester 1, 2022/23 (T2215)
-// Lab: TT1L
-// Names:  AHMAD_LUQMAN_BIN_ZAKARANI     | MUHAMMAD_UMMAR_HISHAM_BIN_AHMAD_MADZLAN
-// IDs:    1211101384                    | 1211100415
-// Emails: 1211101384@student.mmu.edu.my | 1211100415@student.mmu.edu.my
-// Phones: 019-4350096                   | 019-3329702
-// *********************************************************
-
 #include <iostream>
 #include <string>
 #include <cstdlib>
