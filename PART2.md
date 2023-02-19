@@ -58,15 +58,15 @@ For example:
 
 Describe the problems encountered and provide the solutions / plan for the solutions.
 
-1. If zombie restricted with no space to move, it will loop indefinitely
-Solution: make the if else statement that check the location of the zombie n if it is restricted by border or other zombie
+1. If zombie restricted with no space to move, it will loop indefinitely. <br />
+Solution: make the if else statement that check the location of the zombie n if it is restricted by border or other zombie.
 
-2. Finding range of alien from zombie
-Solution: range = diffX + diffY
+2. Finding range of alien from zombie.<br />
+Solution: range = diffX + diffY.
 
-3. The nearest zombie from pod
-Solution: run loop checking for nearest zombie, if nearer it will clear a vector, and put the new nearest zombie, if there are 2 or more that same, it will randomly choosed
+3. The nearest zombie from pod.<br />
+Solution: run loop checking for nearest zombie, if nearer it will clear a vector, and put the new nearest zombie, if there are 2 or more that same, it will randomly choosed.
 
-3. Winning the game
-Solution: every time the zombie is killed, zombie kill counter go up by 1, if the zombie killed is equal to zombie count, the alien win
+3. Winning the game.<br />
+Solution: every time the zombie is killed, zombie kill counter go up by 1, if the zombie killed is equal to zombie count, the alien win.
 
