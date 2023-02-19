@@ -39,8 +39,6 @@ Describe the additional features that has been implemented.
 
 List down the contribution of each group members.
 
-For example:
-
 ### Ahmad Luqman Bin Zakarani
 
 1. Implementing in-game objects.
@@ -49,10 +47,12 @@ For example:
 4. Alien and Zombies attributes display.
 5. Alien can damage the Zombies when they collided.
 6. Zombie can attack the Alien when in range.
+7. Fix bug that occur in zombie move, item and load file.
 
 ### Muhammad Ummar Hisham Bin Ahmad Madzlan
 
-1. 
+1. Documentation
+2. Initial way of save and load
 
 ## Problems Encountered & Solutions
 
